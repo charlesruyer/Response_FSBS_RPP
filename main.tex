@@ -31,6 +31,8 @@ Pascal Loiseau \\
 Paul Edouard Masson Laborde
 
 
+%\setcounter{equation}{0} 
+\renewcommand{\theequation}{R\arabic{equation}}
 \section{Reviewer 1 }
 
 \textit{
@@ -53,8 +55,7 @@ thermal filamentation although the threshold power is equivalent to the requirem
 $\kappa_f l_{sp} > 1$ where the maximum growth rate, $\kappa_f= 0.25(N_e /N_c )(V_0 2 /V_{te} 2 )\omega_0 /C $ and the
 speckle length, $\lambda_{sp} \sim 8f 2 \lambda_0$. It is tempting to speculate that the growth rate including
 nonlocal thermal pressure times the speckle length is the proper threshold.
-Although I anticipate eventually recommending acceptance, the paper needs modifica-
-tion first. Some specific questions and recommendations:}
+Although I anticipate eventually recommending acceptance, the paper needs modification first. Some specific questions and recommendations:}
 
 
 \textit{
@@ -69,16 +70,15 @@ only and reduces to the the collisionless limit of $1/2$ if $\omega_{IAW} > \nu_
 be easily accounted for?
 }
 
-We are also familiar with these results, the choice has been made to focus the publication on the comparison between kinetic and fluid calculations in the most consistent framework possible and demonstrate that accounting exactly for the speckle dynamics in the dispersion relation is feasible. The question at the origin of our study is: What is the  regime  in which our fluid code is quantitatively predictive for capturing the growth of the forward Brillouin scatter ? \tc{This should be clearer now that we slightly revised our introduction.} 
+We are also familiar with these results, the choice has been made to focus the publication on the comparison between kinetic and fluid calculations in the most consistent framework possible and demonstrate that accounting exactly for the speckle dynamics in the dispersion relation is feasible. The question at the origin of our study is: What is the  regime  in which our fluid code is quantitatively predictive for capturing the growth of the forward Brillouin scattering ? This should be clearer now that we slightly revised our introduction.
 Accounting for collisionnal effects on the propagation of \emph{driven} acoustic waves is well grounded, to the best of our knowledge, within  the fluid framework, however, we do not know any proper equivalent derived completely kinetically. Although the equations obtained in  Ref. Berger, et al., PoP 12, 062508 (2005) would be a corner stone in deriving a completely kinetic driven plasma response with Coulomb collisions,  this reference uses a fluid ion response [Eqs. (22)-(23)].
 Note that the reference  mentioned in point 3 addresses  collisional effects in the completely kinetic regime of acoustic wave propagation, but in the the free wave regime only.
 Hence, neglecting the effects of Coulomb collisions on the acoustic frequency allows to present both fully fluid and fully kinetic dispersion relations within the same approach, and solve them with the same numerical method for a proper comparison.
 
-Now, let's  assume we performed some kind of fusion between the completely kinetic free wave results of Ref. Berger and Valeo, POP 12, 032104 (2005) and the driven regime of  Ref. Berger, et al., PoP 12, 062508 (2005), we may therefore generalise our dispersion relations in the kinetic multi ion species case accounting for Coulomb collisions, and the new plasma response factor [$\alpha_k$, Eq. (9)]  would probably involve new quadratures [as Eq. (39) and  (40) of Ref. Berger, et al., PoP 12, 062508 (2005)]. This would indeed add complexity to the numerical resolution of the dispersion relation as $\alpha_k$ now depends on both $\omega/\vert \mathbf{k} \vert $ and $(k_x, k_y)$. This might be feasible,  although it is out of the scope of our manuscript. \tc{A comment has been added in the perspective section, and a reference to both Berger et. al. (2005) publications have been made after Eq. (11).}
+Now, let's  assume we performed some kind of fusion between the completely kinetic free wave results of Ref. Berger and Valeo, POP 12, 032104 (2005) and the driven regime of  Ref. Berger, et al., PoP 12, 062508 (2005), we may therefore generalise our dispersion relations with RPP beams in the kinetic multi-ion species case accounting for Coulomb collisions. There, the new plasma response factor [$\alpha_k$, Eq. (9)]  would probably involve new quadratures [as Eq. (39) and  (40) of Ref. Berger, et al., PoP 12, 062508 (2005)]. This would indeed add complexity to the numerical resolution of the dispersion relation as $\alpha_k$ now depends on both $\omega/\vert \mathbf{k} \vert $ and $(k_x, k_y)$. This might be feasible,  although it is out of the scope of our manuscript. A comment has been added in the conclusions, and a reference to both Berger et. al. (2005) publications have been made after Eq. (11).
 
 \textit{
-3)  Does this formulation deal with slow and fast acoustic modes in multiple ion col-
-lisional and collisionless plasma as described in Berger and Valeo, POP 12, 032104
+3)  Does this formulation deal with slow and fast acoustic modes in multiple ion collisional and collisionless plasma as described in Berger and Valeo, POP 12, 032104
 (2005). Both the frequency changes from adiabatic coefficients of 5/3 to 3 or 1 and the
 damping from viscosity and drag to Landau damping. Is that what your prescriptions
 do?}
@@ -86,20 +86,20 @@ do?}
 No, the kinetic plasma response [Eq. (9)] is purely collisionless (apart from the $A_k$ factor that appear in front of it in the dispersion relations (see response to point 2). However, we account self-consistently in our model for multi ion species effects (the ion susceptibility indeed accounts for the sum over the ion contributions when dealing with CH plasma) and therefore for the slow and fast modes in the collisonless limit. Accounting for all the collisional effects is out of the scope of this manuscript. 
 
 At the end of Sec. II.A., where we already discuss of the validity of $A_k$ correction in the kinetic framework, 
-\tc{we added a discussion  on the role of collisions in multi ion species plasmas. These consideration have also been added to the perspective paragraph. } 
+we added a discussion  on the role of collisions in multi ion species plasmas. These consideration have also been added to the perspective paragraph. 
 
 \textit{
 4) On page 3. the authors state ”Yet, its use [the $A(k)$ factor] is questionable regarding
 the forward Brillouin predictions.” Why?}
 
-As mentioned in the paragraph after Eq. (5), the complete correction, as derived in the fluid framework of Ref. [41] accounts for collisional effects on the  acoustic complex frequency. Although we end up neglecting them, we do not have any well grounded  study that would justify such correction applied to the kinetic driven plasma response  [Eq. (7)]. This would  lead  to a  kinetic equivalent [\emph{i.e.} a non local thermal correction applied to Eq.  (7)] to the correction of Ref. [41]. 
-Indeed, Eqs. (9) and (10) look similar and it is tempting to apply the correction, provided we neglect the Coulomb contribution to the acoustic complex frequency. However we found that only argument unsatisfactory which is the meaning of that sentence. 
+As mentioned in the paragraph after Eq. (5), the complete correction, as derived in the fluid framework of Ref. [41] accounts for collisional effects on the  acoustic complex frequency. Although we end up neglecting them, to the best of our knowledge, we do not have any well grounded  study that would justify such correction applied to the kinetic driven plasma response  [Eq. (7)]. This would  lead  to a  kinetic equivalent [\emph{i.e.} a non local thermal correction applied to Eq.  (7)] to the correction of Ref. [41]. 
+Indeed, Eqs. (9) and (10) look similar and it is tempting to apply the correction, provided we neglect the Coulomb contribution to the acoustic complex frequency. However we found that sole argument unsatisfactory which is the meaning of that sentence. 
 
 \textit{
 5)  on page 4, 2nd column, is FSBS growth bigger even if A(k)=1/2? Multi-ion plasmas
 typically have a higher damping rate than single-ion plasmas.}
 
-\tc{When setting $A_k=1/2$ in the equations, the FSBS growth rate maximum slightly decreases, as expected but still remains much larger than the pane wave limit. We added a sentence regarding this comment in Sec. III.D.}
+When setting $A_k=1/2$ in the equations, the FSBS growth rate maximum slightly decreases, as expected but still remains much larger than the plane wave limit. We added a sentence regarding this comment in Sec. III.D.
 
 \textit{
 6) discussion of speckles in the context of plane wave stability is confusing. In the sim-
@@ -109,10 +109,10 @@ power in a speckle computed for a speckle with the average intensity. Thermal en
 hancement should reduce the needed threshold power but I do not recall any analysis
 that uses that approach.}
 
-The filamentation characterized in Fig. 4(e) presents two peaks, the speckle scale filamentaion feature at $k_y\simeq 0.12k_0$ with $\Gamma \simeq 2\times 10^{-4}k_0$ and another peak at much larger wavelength, $k_y\simeq 0.01k_0$ with $\Gamma \simeq 7\times 10^{-4}k_0$. Such behavior results from the $A_k$ correction, when it is set to $1/2$ the CH plasma becomes filamentation-stable. 
+The filamentation characterized in Fig. 4(e) presents two peaks, the speckle scale filamentation feature at $k_y\simeq 0.12k_0$ with $\Gamma \simeq 2\times 10^{-4}k_0$ and another peak at much larger wavelength, $k_y\simeq 0.01k_0$ with $\Gamma \simeq 7\times 10^{-4}k_0$. Such behavior results from the $A_k$ correction, when it is set to $1/2$ the CH plasma becomes filamentation-stable. 
 The well known filamentation threshold based on the speckle effective power, to us, should not be relevant for the dominant peak but for the one located around the speckle scale, at $k_y\simeq 0.12k_0$.
 
-Hence, we do not see how to derive a filamentation threshold based on hot-spots power that should be well grounded regarding the large-wavelength filamentation resulting from thermal effects. \tc{We added a discussion regarding this comment at the end of  Sec. III.B.}
+Hence, we do not see how to derive a filamentation threshold based on hot-spots power that should be well grounded regarding the large-wavelength filamentation resulting from thermal effects. We added a discussion regarding this comment at the end of  Sec. III.B.
 
 \textit{
 7)   What is the physical reason that a multi-ion plasma is filamentation unstable whereas
@@ -127,9 +127,9 @@ the kinetic and fluid calculations stands in the value of $\alpha_{k/f}(v_\phi=0
  \frac{\sum_i\frac{  Z_iT_e}{ T_i }\frac{  Z_in_i}{ n_e }   }{ 1+ \sum_i\frac{  Z_iT_e}{ T_i }\frac{ Z_i n_i}{ n_e }  } \, \\
     \alpha_f(0) &=  \frac{\Bar{Z_i} T_e}{m_i\Bar{c_s}^2} \,,
 \end{align}
-where $\Bar{Z_i} $ is the average-ion charge number and $\Bar{c_s}$ is the sound speed computed on the averaged-ion parameters. For the parameters of Figs. 2 and 4, $\alpha_k(0)=0.88$ and $\alpha_f(0)= 0.62$, thus showing that the kinetic CH kinetic plasma is more sensitive to a zero-frequency perturbation (hole boring) that its fluid mean-ion counterpart.  However, in the purely collisionless limit, it is not sufficient to make the kinetic plasma filamentation unstable, as mentioned above and at the end of Sec. III.B., the $A_k$ correction is required. 
+where $\Bar{Z_i} $ and $\Bar{m_i}$ are the average-ion charge number and mass respectively  and $\Bar{c_s}$ is the sound speed computed on the averaged-ion parameters. For the parameters of Figs. 2 and 4, $\alpha_k(0)=0.88$ and $\alpha_f(0)= 0.62$, thus showing that the kinetic CH kinetic plasma is more sensitive to a zero-frequency perturbation (hole boring) that its fluid mean-ion counterpart.  However, in the purely collisionless limit, it is not sufficient to make the kinetic plasma filamentation unstable, as mentioned above and at the end of Sec. III.B., the $A_k$ correction is required. 
 
-\tc{We also extended the discussion of Sec. III.B. regarding this comment.}
+We also extended the discussion of Sec. III.B. regarding this comment.
 
 \textit{
 8) How should the reader understand that the peaks $ v_\phi \sim 0.8c_s $ rather than $= c_s$ for
@@ -138,9 +138,9 @@ multi-ions. Is $c_s =\omega/k$ is the solution of the kinetic or fluid dispersio
   
 Here,   $c_s$ is defined as $c_s=\sqrt{\frac{Z_iT_e +3T_i}{m_i}}$ with the mean ion parameters throughout the manuscript in order to adopt the same definition as in most LPI studies and hydrodynamic codes (at least ours), which, as shown in Ref. Berger and Valeo, POP 12, 032104 (2005) and [50,51], does not necessarily coincide with $\omega/k$,  solution of the dispersion relation.
 This is detailed below Eq.  (4) and in the caption of Fig. 2 and 4. 
-Therefore, this is not the proper sound speed definition, allowing us to characterize and evidence the discrepancy expected from a hydrodynamic code that would use such na\"ive sound speed in the multi ion species case. 
+Therefore, $c_s$ as defined in our manuscript is not the solution of the electrostatic dispersion relation, allowing us to characterize and evidence the discrepancy expected from a hydrodynamic code that would use such na\"ive sound speed in the multi ion species case. 
 
-The definition that we use,   already mentioned in the second column of page 4, \tc{is now detailed in the multi ion species case}. Moreover a comment regarding the proper sound speed in CH plasma is already included  in the plane wave case (second column page 4), in the caption of Fig. 2 and 4 and \tc{is now recalled in Sec. III.D, second column page 9}.
+The definition that we use,   already mentioned in the second column of page 4, is now detailed in the multi ion species case. Moreover a comment regarding the proper sound speed in CH plasma is already included  in the plane wave case (second column page 4), in the caption of Fig. 2 and 4 and is now recalled in Sec. III.D, second column page 9.
   
 \textit{
 9) It is worth noting that the discrete spectrum is a consequence of the RPP model.
@@ -164,55 +164,70 @@ The manuscript in the present form is not suitable for publication. The reasons 
 \textit{
 1) The paper is badly structured: the theoretical part with two numerical illustrations is followed by an experiment, which is conducted with completely different parameters. The experiment is followed by the description of numerical illustration with emphasis on the kinetic aspects, and all that ends up with two hydrodynamic simulations using the fluid approach and RPP laser beam, which is not relevant to the theoretical model. There is no effort to explain what is really new in this work. }
 
-We believe that this comment  results from all the misunderstanding detailed subsequently. 
+We believe that this comment  results from all the profound  misunderstandings detailed subsequently. The most concerning one corresponds to point 3 where the stating point of our theory, the RPP fields that we use (introduced in Refs. [58,59] and demonstrated in these references to be relevant to RPP lasers), has been misread 
+by the referee and confused with "phase modulated fields". This explains why the referee does not see the novelty of our work.  
+
+Additionally, point 4(ii) and the references in point 3 to Laval (which is 1D) and Thomson  (which is 0D) work suggest a misunderstanding of the 2D geometry required to address the forward Brillouin, and extensively detailed in our manuscript. 
+
+As for the the structure of our study, we respond to this comment in point 5(i).
+
 
 \textit{
 2) Section 2 recalls the linear theory of ion parametric instabilities: SBS and filamentation. All the theory can be found in ref. 44 by Drake et al. in both fluid and kinetic limits for a single ion species. The corrections related to nonlocal transport were introduced in ref. 40. Expressions for multi-species plasmas are given in refs. 46 and 50. Thus, there is nothing new in section 2 that may justify publication of this part of paper. }
 
 Section 2 was not intended to be new, as already mentioned at the end of Sec. II.A.
 However, it was included at the beginning of the manuscript for two reasons: 
-First, it allows to present the dispersion relation derivation  method on a simple plane wave case, that ease the understanding of section 3. Regarding the misunderstanding related to comment 3 and 4, this section does no seems unnecessary to us. Then, the results of Fig. 1 and 2 serve as a comparison for assessing the impact of the random phase plates on the filamentation and forward Brillouin. 
+First, it allows to present the dispersion relation derivation  method on a simple plane wave case, that ease the understanding of section 3. Because of the misunderstandings related to comment 3 and 4, this section does no seems unnecessary. 
+Then, the results of Fig. 1 and 2 serve as a comparison for assessing the impact of the random phase plates on the filamentation and forward Brillouin. 
 
 In order to clarify this point, we modified the last paragraph of the introduction, replacing \\
-\textcolor{red}{"We first derive both the kinetic and ..." \\
+"We first derive both the kinetic and ..." \\
 by\\
-We first recall both the kinetic and ...
-}
+"We first recall both the kinetic and ..."
 
 \textit{
     3) Section 3 is not innovative either. It presents the theory of filamentation and SBS in a phase modulated electromagnetic field, which was developed in many papers starting from Thomson et al (Phys. Fluids 1974) and Laval et al (Phys. Fluids 1977). However, there are no references to these papers in the manuscript. Moreover, the phase modulated laser field has a constant average amplitude across the beam, it cannot be assimilated with the RPP beam, which is strongly modulated in amplitude. So, the theoretical model is not new and it is irrelevant to experiments on laser plasma interactions with beams smoothed with random phase plates in the near field and which are strongly modulated in amplitude in the far field. There is an error in Eq. 19: factor $k_m$ is missed in the right hand side. }
 
-We believe that there is here a profound misunderstanding of the laser fields considered in this manuscript. 
-As mentioned [Eq. (18)], we consider the  laser introduced in Refs. [56, 57], 
+We believe that there is here a profound misunderstanding about  the laser fields considered in this manuscript. Note that the RPP laser is at the basis of our modeling and accounting exactly for their forward scattering is one of the main novelty of our study.
+As mentioned [Eq. (18)], we consider the  laser introduced in Refs. [58, 59], 
 \begin{align}
 E_{\rm RPP}(t,\mathbf{r})  = \frac{E_0}{N} \sum_{n,\vert k_{\perp}\vert<k_m }^N  \cos(k_0x - \omega_0t +\mathbf{k}_\perp(n) \cdot \mathbf{r}_\perp +\Phi_{\mathbf{k}_\perp})\, . \label{eq:erpp}
  \end{align}
 where $\Phi_{\mathbf{k}_\perp}$ are random constants, either $0$ or $\pi$.
 This greatly differ from the "phase modulated fields", as extensively studied decades ago, due to the term $\mathbf{k}_\perp(n) \cdot \mathbf{r}_\perp $ inside the cosine that decreases the beam spatial coherence. Moreover, in the phase modulated fields, $\Phi$ would be a stochastic function of time and not a set of random constants.  
-As a consequence, the resulting pump fields in our manuscript are modulated in amplitude transversely to the main laser axis and as demonstrated   (also decades ago) in Refs. [7,58]. Indeed, Rose shows that these fields lead in vacuum  to the presence of hot spots or speckles with a probability distribution function that scales as $\sqrt{I_s/I_0}\exp(-Is/I_0) $, (where $I_s$ and $I_0$ are the speckle and averaged intensity, respectively) and as expected from a random phase plates (see Ref. [7]). 
-Hence, we consider a pump wave with a spatial spectrum that has a finite transverse width and is coherent temporally, unlike the referee understanding of a  spatially coherent laser field, with random phase that would be more relevant for spectral dispersion (SSD). 
+As a consequence, the resulting pump fields in our manuscript are modulated in amplitude transversely to the main laser axis and as demonstrated   (also decades ago) in Refs. [7,58,59]. Indeed, Rose shows that these fields lead in vacuum  to the presence of hot spots or speckles with a probability distribution function that scales as $\sim\sqrt{I_s/I_0}\exp(-I_s/I_0) $, (where $I_s$ and $I_0$ are the speckle and averaged intensity, respectively) and as expected from a random phase plates (see Refs. [7,60]). 
+Hence, we consider a pump wave with a spatial spectrum that has a finite transverse width and is coherent temporally, unlike the referee's understanding of a  spatially coherent laser field, with random phase that would be more relevant for spectral dispersion (SSD). 
 
 Reference Thomson (Phys. Fluids 1974) is exclusively temporal considerations on parametric instabilities and therefore completely irrelevant for the spatial scatter growth  of spatially smoothed laser pulse. Regarding Ref. Laval et al (Phys. Fluids 1977), only one dimensional system are considered (therefore already irrelevant regarding forward Brillouin), additionally the pump considered is also spatially coherent.
-To the best of our knowledge, the only publication with comparable modeling is Ref. [52] where a sum over the phase plate elements appears in  Eq. (43) and is used to estimate the filamentation  instability thresholds.
+To the best of our knowledge, the only publication with comparable modeling is Ref. [53] where a sum over the phase plate elements appears in  Eq. (43) and is used to estimate the filamentation  instability thresholds.
 
-In order to avoid future misunderstanding, \tc{we added a comment after Eqs. (20) on the presence of hot spots resulting from the studied pump fields.}
+In order to avoid future misunderstanding, we added a comment after Eqs. (20) on the presence of hot spots resulting from the studied pump fields.
 
 \textit{
 4) Numerical results presented in figures 3 and 4 look strange. (i) Firstly, they cannot be compared with figures 1 and 2 as authors suggest, because the scales on the axes are completely different. (ii) Secondly, I do not understand the oscillations in the real and imaginary parts of $k_x$: there are no physical reasons for that and the real part of $k_x$ should be negative: according to the momentum conservation $k_x = - \sqrt{k_0^2 - k_y^2}$. (iii) Thirdly, according to the theory of parametric instabilities driven by a broadband pump, unstable modes should be suppressed for perturbations with wavelengths larger than the correlation length, $k_y < k_m$. But this is not the case in figure 4e in the kinetic limit. Unfortunately, the authors do not propose any explanations for these strange results. }
 
-(i) \tc{This is true, as it was, the comparison was not obvious.  We modified Figs. 1 and 2 so that the scales on the axis are now more consistent with Fig. 3  and 4. We also found that the calculations, for Figs. 1 and 2, were made with the normalized acoustic damping rate, $\gamma_0$, coming from the linearisation of Eq. (6), and not directly from Eq. (6) as mentioned in the text. It has been corrected, slightly changing the growth rate maximum and locations. 
-The maximum abscissa of Figs. 1 and 2 is now $0.2k_0$, still smaller than the one from Fig. 3 and 4, however, using $0.5k_0$ would make the growth rate maximum hard to read. 
-We believe that the comparison is now eased by the new plot and the description that now appear in the text. 
-} 
+(i) This is true, as it was, the comparison was not obvious.  We modified Figs. 1 and 2 so that the scales on the axis are now more consistent with Fig. 3  and 4. We also found that the calculations, for Figs. 1 and 2, were made with the normalized acoustic damping rate, $\gamma_0$, coming from the linearisation of Eq. (6), and not directly from Eq. (6) as mentioned in the text. It has been corrected, slightly changing the growth rate maximum and location. 
+The maximum abscissa of Figs. 1 and 2 is now $0.2k_0$, still smaller than the one from Figs. 3 and 4, however, using $0.5k_0$ would make the growth rate maximum hard to read. 
+We believe that the comparison is now eased by the corrected plot and by the description that now appears in the text. 
 
-(ii) 
-In the resolution of the forward Brillouin growth, we found that both $1/D_-$ and $1/D_+$ terms  in Eq. (25) are important to account for. Unlike for backward Brillouin,  neglecting $1/D_+$ in front of $1/D_-$  results in a different growth rate.
-Hence the decomposition of the pump in a scattered and an acoustic wave  follows both light branches $k_0=k_d \pm k_s$ unlike the referee suggests. As we retain in Fig. 3 and 4 the unstable solutions only, we obtain  oscillating values of $\Re(k_x)$. \tc{We clarified the importance of both $1/D_-$ and $1/D_+$ after equation (25) and in Sec. III.D.}
+(ii) The formula used by the referee, $k_x = - \sqrt{k_0^2 - k_y^2}$, characterizes, here again, a profound misunderstanding of our studied geometry. Momentum conservation applied to the forward Brillouin may be na\"ively written in the required two dimensions geometry as follow,
+\begin{equation} \label{eq:m}
+    \mathbf{k}_0 = \mathbf{k}_d  + \mathbf{k}\, ,
+\end{equation}
+where  $\mathbf{k}_0$ , $ \mathbf{k}_d $ and  $\mathbf{k}$ are the pump, scatter and acoustic wavevector. The wavevector that appear in the axes of Figs. 1, 2, 3 and 4 as mentioned by the referee are $\mathbf{k}$, written in our study $\mathbf{k}_s$. Starting from Eq. \eqref{eq:m}, there is no way to recover  $k_x = - \sqrt{k_0^2 - k_y^2}$ unless neglecting the scattered wave and/or confusing the $x$ and $y$ component of $\mathbf{k}_d$ and $\mathbf{k}$ and/or confusing the correct complex vector modulus $\vert \mathbf{k}\vert =\sqrt{\vert k_{sx}\vert ^2 + \vert k_{sy}\vert ^2 }$ (which is a positive real) by  $\vert \mathbf{k}\vert =\sqrt{k_{x} ^2 + k_{y} ^2 }$ (which is a complex). 
+
+Additionally, it is important to note that Eq. \eqref{eq:m} is strongly approximated here for two important reasons. First of all, the pump wave results from the superposition of many plane waves  of  wavevector $ \mathbf{k}_0 = k_0 \Hat{\mathbf{x}} + k_\perp\Hat{\mathbf{y}}  $ where $\vert k_\perp \vert< k_m=k_0/(2f_\sharp)$. Hence, the use of  Eq. \eqref{eq:m} excludes the main novelty of our work (see answer to point 3). 
+
+Secondly, it restricts the analysis to one light branch only, which is found to be wrong in our case. 
+In the resolution of the forward Brillouin growth, we found that both $1/D_-$ and $1/D_+$ terms  in Eq. (25) are important to account for. Unlike for backward Brillouin for which  neglecting $1/D_+$ in front of $1/D_-$ is valid and therefore Eq. \eqref{eq:m} may be used, for the FSBS of an RRP pulse, this is wrong.
+Hence the decomposition of the pump in a scattered and an acoustic wave requires both light branches $\mathbf{k}_0=\pm \mathbf{k}_d + \mathbf{k}_s$ unlike the referee suggests. As we retain in Figs. 3 and 4 the unstable part of both  solutions (already mentioned at the end of Sec. III.A.), we obtain  oscillating values of $\Re(k_x)$.
+
+We clarified the importance of both $1/D_-$ and $1/D_+$ after equation (25) and in Sec. III.D. We also gave more details on the role of both light branches in Figs. 3  and 4 at the end of Sec. III.A. and in III.D. Finally, a discussion about the validity of Eq. \eqref{eq:m} is added after Eq. (20). 
 
 (iii) Regarding point three, to the best of our knowledge, no study has ever demonstrated that all parametric instabilities are always completely suppressed  for $k_y < k_m$. 
 %This is seems to be a baseless comment. 
 However, as already  pointed in the manuscript in Sec. III.B. and in the conclusion, we evidence that the use of RPP strongly decreases the filamentation growth rate [as also evidenced by the comparison between the maximum growth rate in Figs.  2(a) and 4(e)] in the CH case, and does stabilize it in the proton case [Figs. 1 and 3]. 
-Additionally, we do propose an explanation for these findings, detailed in light of the experiment  at the end of Sec. III.C.
+Additionally, we do propose an explanation for these findings regarding the filamentation, detailed in light of the experiment  at the end of Sec. III.C. and regarding the FSBS in Sec. III.D.
 
 \textit{
 5) (i) Section 3C perturbs the logic of the manuscript. Experiment on the laser plasma interaction was conducted under the conditions irrelevant to the theoretical model presented in the previous sections and the interpretation is questionable. (ii) Figure 5b gives no scale for the amplitude of density modulations in plasma, (iii) and excitation of perturbations with the wavelength of 77 µm during time shorter than 1 ns cannot be explained by the filamentation instability. The ion acoustic velocity under the experimental conditions is less than 80 µm/ns, and the laser pulse duration of 0.3 ns is insufficient for formation of density perturbation with such wavelength. }
@@ -220,13 +235,14 @@ Additionally, we do propose an explanation for these findings, detailed in light
 (i) We cannot agree with the referee about the logic of the manuscript and the relevance of our model to the experiment. 
 All assumptions made in deriving our dispersion relations are valid for the experimental laser and plasma parameters. The focal is long enough, the laser has a sufficiently low intensity and is spatially smoothed with RPP (see comment to point 3). It is true that the  plasma temperature is lower than in  ICF, but we see no reasons to  restrict the use of our dispersion relations to purely ICF conditions.
 
-Sec.  III.B, III.C, III.D. and IV. have been included to the manuscript in order to  validate our theoretical results. They show the relevance of our dispersion relations both to numerical and experimental results, demonstrating that our conclusions are grounded. We do not see why the validation of a theory should not use experimental results if possible.
+Yet, we revised the section ordering.  Sec. III now corresponds to the RPP theory and IV and V to its application to   the filamentation and FSBS respectively. We also moved some experimental details in the appendix. 
+Secs.  IV. and IV. have been included to the manuscript in order to  validate our theoretical results. They show the relevance of our dispersion relations both to numerical and experimental results, demonstrating that our conclusions are grounded. We do not see why the validation of a theory should not use experimental results if possible.
 
-(ii) Indeed, Fig. 5b gives no scale of the plasma density because this plot illustrates the experimental proton radiographs (RCF)  and not a density measurement, as written in the caption and in the text. As mentioned in the text and in the Appendix, the contrast fluctuations in the RCF can be related to a density fluctuation amplitude, however, this requires additional modeling that has nothing to do with a plot about the experiment and its measurements such as Fig. 5.
+(ii) Indeed, Fig. 5b gives no scale of the plasma density because this plot illustrates the experimental proton radiographs (RCF)  and not a density measurement, as written in the caption and in the text. However, it gives a fair estimate of the filaments size observed in the experiment. Besides, as mentioned in the text and in the Appendix, the contrast fluctuations in the RCF can be related to a density fluctuation amplitude, however, this requires additional modeling far beyond the purpose of the present work.
 
-(iii) Here, the referee also raises a relevant comment. The transient time of filamentation is comparable to $\lambda_F/c_s/2$ where $\lambda_F$ is the filamentation wavelenth. As shown in Fig. 6(a), the laser pulse is expected to last much longer than the 0.3 ns mentioned by the referee, 0.3 ns is just the HWHM of the Gaussian pulse. The temperature evolution is computed on a duration of 3 ns, with a temperature raising from a few $10$ of eV to $300$ eV. Here the relevant quantity to compare to $\lambda_F/2$ would be the length travelled by an acoustic wave, \emph{i.e.}  $\int_0^t c_s(t')dt'$. 
-\tc{In order to clarify that point, we superimposed in Fig. 6(b) $\lambda (t) =\int_0^t c_s(t')dt'$ as a red plain line in order to illustrate that the asymptotic regime relevant for our dispersion relations is reached. This line is also discussed in the text.
-Additionally, we now give more details on how the Bremsstrahlung absorption frequency is calculated}
+(iii) The referee is right, the transient time of filamentation is comparable to $\lambda_F/c_s/2$ where $\lambda_F$ is the filamentation wavelength. As shown in Fig. 6(a), the laser pulse is expected to last much longer than the 0.3 ns mentioned by the referee, 0.3 ns is just the HWHM of the Gaussian pulse. The temperature evolution is computed on a duration of 3 ns, increasing from  a few $10$ of eV to $300$ eV. Here the relevant quantity to compare to $\lambda_F/2$ would be the length travelled by an acoustic wave, \emph{i.e.}  $\int_0^t c_s(t')dt'$. 
+In order to clarify that point, we superimposed in Fig. 6(b) $\lambda (t) =\int_0^t c_s(t')dt'$ as a red plain line  to illustrate that the asymptotic regime relevant for our dispersion relations is reached. This line is also discussed in the text.
+Additionally, we now give more details on how the Bremsstrahlung absorption frequency is calculated.
 
 \textit{
 6) (i) Hydrodynamic simulations presented in section 4 are using an amplitude modulated beam (see figures 7a,d). This is incompatible with the theoretical model presented in section 3 for a phase modulated field. 
@@ -234,22 +250,22 @@ Additionally, we now give more details on how the Bremsstrahlung absorption freq
 (iii) Figure 7e needs to be presented in the $k_y/\omega$ coordinates in order to be compatible with figure 7f. 
 (iv) Equation 40 looks strange: I do not understand where the difference of two exponential in the numerator comes from. Probably both terms should be in the same exponential. }
 
-(i) As detailed in the response to point 3,  the referee is wrong here, the laser modeled here is generated by a Random Phase plate [Eq. (18)] which generates amplitude modulations (the so called speckles) with a probability distribution in vacuum that is comparable to realistic experimental values (see Refs. [POF B Rose et. al. (1993) and POP Garnier et. al. 2001]) and the one obtained in our hydrodynamic code. Our theory is therefore comparable to our numerical results. \tc{As mentioned in point 3 we clarified the presence of speckle resulting from  Eq.  (18)  after Eq. (20).}
+(i) As detailed in the response to point 3,  the referee is wrong here, the laser modeled here is generated by a Random Phase Plate [Eq. (18)] which generates amplitude modulations (the so called speckles) with a probability distribution in vacuum that is comparable to realistic experimental values (see Refs. [POF B Rose et. al. (1993) and POP Garnier et. al. 2001]) and the one obtained in our hydrodynamic code. Our theory is therefore comparable to our numerical results. As mentioned in point 3, we clarified the presence of speckle resulting from  Eq.  (18)  after Eq. (20).
 
-(ii) This is not what plot 7b shows.  Fig. 7b is the density spectrum at a given $x$-position, hence, the presence of a dominant signal for $k_y < 0.2 k_0$ does not show that it has been amplified or excited. It just shows that the acoustic trace is clearly visible (black plain line). 
-However, the comparison of the density spectrum at two positions (Figs. 7c,f) demonstrates an amplification of the density fluctuations, dominant for  $k_y > 0.2 k_0$ as expected and as already discussed in Sec. IV. and in the Figure's caption. 
+(ii) This is not what plot 7b shows.  Fig. 7b illustrates the density transverse spectrum at a given $x$-position, hence, the presence of a dominant signal for $k_y < 0.2 k_0$ does not show that it has been amplified or excited. It just shows that the acoustic trace is clearly visible (black plain line) and the dominant signal for $k_y\lesssim 2k_m$ corresponds to the ponderomotive imprint of the laser on the plasma (as know mentioned in the text, above Eq. (38)).
+However, the comparison of the density spectrum at two positions (Figs. 7c,f) unravels an amplification of the density fluctuations, dominant for  $k_y > 0.2 k_0$ as expected and as already discussed in Sec. IV. and in the Figure's caption. 
 
-(iii) The dispersion relations that we solve naturally gives the solution in  the $(v_\phi,\vert k \vert)$ coordinates when the space and time Fourier transform of  our hydrodynamic results  leads to the $(\omega,k_y)$-plane. The transform between these two planes gives oddly unsatisfactory plots, where the growth rate looks strongly deformed for two reasons, it is not a Cartesian transform (from one Cartesian mesh to another), and the transform enclose a singularity. Because Figure 7(e) is fairly simple, one blob lying on the acoustic trace for $k_y>0.2k_0$, its comparison with Fig. 7(f) seems straightforward.
+(iii) The dispersion relations that we solve naturally gives the solution in  the $(v_\phi,\vert k \vert)$ coordinates when the space and time Fourier transform of  our hydrodynamic results  leads to the $(\omega,k_y)$-plane. The transform between these two planes gives oddly unsatisfactory plots, where the growth rate looks strongly deformed for two reasons, it is not a Cartesian transform (from one Cartesian mesh to another), and the transform enclose a singularity. Because Figure 7(e) is fairly simple, one peak lying on the acoustic trace for $k_y>0.2k_0$, its comparison with Fig. 7(f) seems straightforward.
 As we want to avoid to apply  unjustified transform when possible, especially when they add numerical artefact to our results, we settled with Figs. 7(e,f).
 
-\tc{In order to clarify the analysis, slightly more details are given at the end of first column and beginning of second column on  page 10.}
+In order to clarify the analysis, more details are given at the end of first column and beginning of second column on  page 10.
 
-(iv) \tc{Eq. (40) is valid, the difference comes from diffraction, we clarified that section by giving more calculation details. } 
+(iv) Eq. (40) is valid, the difference comes from diffraction, we clarified that section by giving more calculation details.
 
 \textit{
 7) There are also many minor errors and typos that I do not report here.
 }
 
-\tc{The manuscript has been carefully red and a few typos has been corrected. We hope it is now at publication level.  }
+The manuscript has been carefully read and a few typos has been corrected. We hope it is now at publication level.
 
 \end{document}
